@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  backend:
+    image: clausholmgaard/service-app-backend
+    build:
+      context: ${ServiceAppBackend:-.}
+      dockerfile: Dockerfile
+    env_file:
+      - ${ServiceAppBackend:-.}/env/backend.all

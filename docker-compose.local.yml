@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      target: builder
+    volumes:
+      - ${ServiceAppBackend:-.}/src:/app
+      - /app/node_modules
+    env_file:
+      - ${ServiceAppBackend:-.}/env/backend.dev
